@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class WeatherResponse(
     @SerializedName("main") val weatherDetails: WeatherDetails,
     @SerializedName("weather") val weatherMain: List<WeatherMain>,
-    @SerializedName("hourly") val weatherHourly: List<WeatherHourly>
+    @SerializedName("list") val weatherHourly: List<WeatherHourly>
 )
 
 data class WeatherDetails(
@@ -22,8 +22,19 @@ data class WeatherMain(
 )
 
 data class WeatherHourly(
-    @SerializedName("id") val id: Int,
-    @SerializedName("description") val description: String
+    @SerializedName("dt_txt") val dt_txt: String,
+    @SerializedName("main") val main: WeatherHourlyMain,
+    @SerializedName("weather") val weather: List<WeatherHourlyDetails>
+)
+
+data class WeatherHourlyMain(
+    @SerializedName("temp") val temperature: Double,
+    @SerializedName("humidity") val humidity: Int,
+    @SerializedName("feels_like") val feels_like: Double
+)
+
+data class WeatherHourlyDetails(
+    @SerializedName("id") val id: Int
 )
 
 

@@ -23,6 +23,9 @@ class WeatherViewModel : ViewModel() {
     private val _weatherMain = MutableLiveData<List<WeatherMain>>()
     val weatherMain: LiveData<List<WeatherMain>> = _weatherMain
 
+    private val _weatherHourly = MutableLiveData<List<WeatherHourly>>()
+    val weatherHourly: LiveData<List<WeatherHourly>> = _weatherHourly
+
 
     fun getWeather(city: String) {
         viewModelScope.launch {
@@ -35,6 +38,13 @@ class WeatherViewModel : ViewModel() {
         viewModelScope.launch{
             val main_details = repository.getMainWeather(city)
             _weatherMain.value = main_details
+        }
+    }
+
+    fun getHourWeather(city: String){
+        viewModelScope.launch{
+            val hour_details = repository.getHourWeather(city)
+            _weatherHourly.value = hour_details
         }
     }
 

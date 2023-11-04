@@ -18,4 +18,10 @@ interface WeatherApiService {
         @Query("appid") apiKey: String
     ): Response<WeatherResponse>
 
+    @GET("forecast")
+    suspend fun getHourWeather(
+        @Query("q") city: String,
+        @Query("appid") apiKey: String
+    ): Response<WeatherResponse>
+
 }

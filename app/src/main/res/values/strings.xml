@@ -3,4 +3,6 @@
     <string name="temperature">none</string>
     <string name="humidity">none</string>
     <string name="description">none</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

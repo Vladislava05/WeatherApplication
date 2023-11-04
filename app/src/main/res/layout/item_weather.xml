@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hourIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="113dp"
+        android:layout_height="78dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/weatherTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2240E4"
+            android:gravity="center_vertical|center_horizontal|bottom"
+            android:text="30C"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/weatherDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2240E4"
+            android:gravity="center_vertical|center_horizontal|top"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/weatherHourIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
