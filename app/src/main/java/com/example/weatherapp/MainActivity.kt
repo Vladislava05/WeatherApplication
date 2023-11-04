@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 })
             viewModel.weatherHourly.observe(this,{weatherHourly ->
+                weatherList.clear()
                 weatherList.addAll(weatherHourly)
                 weatherAdapter.notifyDataSetChanged()
 
